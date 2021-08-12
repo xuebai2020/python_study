@@ -1,0 +1,24 @@
+# 若sleep时间设置很长，会出现阻塞，只有等loop0执行完之后，才会执行loop1，需要加入多线程进行优化
+
+import logging   #导入日志模块
+from time import sleep, ctime   #ctime打印当前时间
+
+logging.basicConfig(level=logging.INFO)   #需要日志初始化，填写日志输出等级
+
+def loop0():
+    logging.info("start loop0 at" + ctime())
+    sleep(4)
+    logging.info("end loop0 at" + ctime())
+
+def loop1():
+    logging.info("start loop1 at" + ctime())
+    sleep(2)
+    logging.info("end loop1 at" + ctime())
+
+def main():   #主函数
+    logging.info("start all at" + ctime())
+    loop0()
+    loop1()
+    logging.info("end all at" + ctime())
+if __name__ == '__main__' :
+    main()

@@ -1,0 +1,17 @@
+#模拟器
+platformName: Android
+platformversion: 6.0.1
+deviceName: emulator-5554
+
+#真机
+#省略
+
+appname: com.tal.kaoyan
+noReset: False
+unicodekeyboard: True
+resetkeyboard: True
+
+appPackage: com.tal.kaoyan
+appActivity: com.tal.kaoyan.ui.activity.SplashActivity
+
+

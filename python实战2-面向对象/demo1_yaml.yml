@@ -1,0 +1,12 @@
+#锚点的使用，& 用来建立锚点（defaults），<< 表示合并到当前数据，* 用来引用锚点
+defaults: &defaults
+  adapter:  postgres
+  host:     localhost
+
+development:
+  database: myapp_development
+  <<: *defaults
+
+test:
+  database: myapp_test
+  <<: *defaults

@@ -1,0 +1,15 @@
+#电动车案例
+#使用yaml配置电动车信息
+#配置两台电动车的信息，设置默认运行的电动车
+
+mybycycle: &my1
+  battery_level: 20
+  km: 1999
+
+mybycycle1: &my2
+  battery_level: 10
+  km: 19
+
+default:
+  <<: *my2
+
